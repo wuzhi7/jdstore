@@ -50,7 +50,7 @@
 .navbar-wrap {
   width: 100%; /*铺满屏幕*/
   background: #edece8; /*背景颜色*/
-  font-size: 12px; /*字体12px*/
+  font-size: 14px; /*字体12px*/
   height: 42px; /*设置高度*/
   line-height: 42px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
   color: #651d1c; /*字体颜色*/
@@ -111,6 +111,7 @@
   float: left;
   width: 180px;
   margin-right: 180px;
+  margin-top: -25px
 }
 
 .headerContent-item2 {
@@ -161,10 +162,17 @@ width: 300px;
 }
 
 /*分类*/
-.orderList li {
+
+
+.orderList {
   margin: 20px auto;
   width: 970px;
   overflow: hidden;
+
+}
+
+.orderList li {
+
   display: inline;
 }
 
@@ -174,6 +182,7 @@ width: 300px;
   height: 42px;
   line-height: 42px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
   padding-right: 20px;
+  padding-left: 10px;
 }
 
 /*商品列表*/
@@ -200,6 +209,7 @@ width: 300px;
 
 /* footer */
 .footer {
+  background: #edece8; /*背景颜色*/
   margin-top: 20px;
   width: 100%;
   height: 83px;
