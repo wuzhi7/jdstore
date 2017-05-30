@@ -64,7 +64,7 @@ class ProductsController < ApplicationController
 
 
   def favorite
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
       type = params[:type]
     if type == "favorite"
       current_user.favorite_products << @product
