@@ -17,6 +17,7 @@
 //= require bootstrap/dropdown
 //= require autosize.min
 //= require wow.min
+//= require bootstrap/modal
 //= require_tree .
 
 
