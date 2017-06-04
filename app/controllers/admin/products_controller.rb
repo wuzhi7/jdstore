@@ -5,7 +5,7 @@ layout "admin"
 
 
     def index
-     @products = Product.all.order("position ASC")
+     @products = Product.all.order("position ASC").paginate(:page => params[:page], :per_page => 5)
     end
 
     def new
