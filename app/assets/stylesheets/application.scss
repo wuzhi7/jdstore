@@ -45,12 +45,17 @@
 }
 
 
+.bg-color6 {
+  background: #f5f5f5;
+}
+
 
 /*navbar导航栏*/
 .navbar-wrap {
   width: 100%; /*铺满屏幕*/
   background: #edece8; /*背景颜色*/
-  font-size: 12px; /*字体12px*/
+  font-size: 14px; /*字体12px*/
+  font-family: "Helvetica Neue", "Microsoft Yahei", "微软雅黑";
   height: 42px; /*设置高度*/
   line-height: 42px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
   color: #651d1c; /*字体颜色*/
@@ -93,6 +98,12 @@
   color: #C81623; /*鼠标一上去的时候，字体变成红色*/
 }
 
+/*主体页面*/
+.body {
+  width: 100%; /*铺满屏幕*/
+  background: #f5f5f5;
+}
+
 /*头部*/
 .header {
   width: 970px;
@@ -111,6 +122,7 @@
   float: left;
   width: 180px;
   margin-right: 180px;
+  margin-top: -25px
 }
 
 .headerContent-item2 {
@@ -123,8 +135,14 @@ float: right;
 width: 300px;
 margin-top: -60px
 
+
 }
 
+.headerContent-item3 :hover {
+color: #C81623; /*鼠标一上去的时候，字体变成红色*/
+background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
+
+}
 .headerContent-item3-1 {
 float: left;
 width: 300px;
@@ -133,14 +151,26 @@ width: 300px;
 /*菜单*/
 .menu {
   width: 100%;
+
 }
 
 .menuList {
   width: 970px;
+
   margin: 20px auto;
   height: 42px;
   line-height: 42px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
-  padding-left: 10px; /*左边加点空间，不然太挤啦*/
+  padding-left: 20px; /*左边加点空间，不然太挤啦*/
+  font-size: 16px; /*字体12px*/
+  font-family: "Microsoft Yahei", "微软雅黑";
+  background-color: #651d1c;
+  color: #ffffff;
+
+}
+
+.menuList a {
+
+  color: #ffffff;
 }
 
 .menuList-item li {
@@ -148,6 +178,20 @@ width: 300px;
   width: 108px;
   height: 42px;
   display: inline;
+  text-align: center;
+}
+
+.active {
+  width: 100px
+
+}
+
+
+
+.menuList-item :hover,
+.menuList-item :visited {
+  background-color: #c16968; //鼠标放置在链接上的背景颜色
+  text-decoration: none; /*不要下划线啦，好丑*/
 }
 
 
@@ -160,11 +204,19 @@ width: 300px;
   overflow: hidden;
 }
 
-/*分类*/
-.orderList li {
+/*排序*/
+
+
+.orderList {
   margin: 20px auto;
   width: 970px;
   overflow: hidden;
+  background-color: #651d1c;
+
+}
+
+.orderList li {
+
   display: inline;
 }
 
@@ -174,6 +226,10 @@ width: 300px;
   height: 42px;
   line-height: 42px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
   padding-right: 20px;
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 14px; /*字体12px*/
+  font-family: "Microsoft Yahei", "微软雅黑";
 }
 
 /*商品列表*/
@@ -181,14 +237,22 @@ width: 300px;
   margin: 20px auto;
   width: 970px;
   overflow: hidden;
+
 }
 
 .productList-item {
-  float: left;
+  // float: left;
   width: 228px;
-  height: 250px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  height: 280px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #ffffff; /*背景颜色*/
+}
+
+.productlist-item-a {
+  font-size: 16px;
+  color: #d32048;
 }
 
 .productList-lastItem {
@@ -199,10 +263,16 @@ width: 300px;
 
 
 /* footer */
-.footer {
+footer {
+  background: #edece8; /*背景颜色*/
   margin-top: 20px;
   width: 100%;
   height: 83px;
+}
+
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #edece8;
 }
 
 
@@ -245,4 +315,921 @@ width: 300px;
   border-bottom: 1px dotted #CCC;
   padding: 15px;
   font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
+
+////-----show.image----///
+.image-1 {
+  width: 420px;
+  height: 420px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  display: inline-flex;
+}
+
+
+div.zoomDiv {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  display: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+div.zoomMask {
+  position: absolute;
+  background: url("/images/mask.png") repeat scroll 0 0 transparent;
+  cursor: move;
+  z-index: 1;
+}
+
+.box {
+  width: 930px;
+  height: 600px;
+  //margin:100px 0 0 0;
+  display: inline-block;
+  //padding-top: 14px;
+}
+/*-------------商品图片----------*/
+.wrap-left {
+  width: 50%;
+  float: left;
+}
+
+.tb-booth {
+  width: 420px;
+  height: 420px;
+  border: 1px solid #f2f2f2;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 22.5px;
+}
+
+.tb-s310 a,
+.tb-s40 a {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  //border:1px solid #C30008;
+}
+
+.tb-thumb {
+  margin: 22px 22.5px 0;
+  width: 420px;
+  text-align: center;
+}
+
+.tb-thumb ul {
+  width: 420px;
+  padding: 0;
+  float: left;
+}
+
+.tb-thumb li {
+  list-style-type: none;
+  display: inline-block;
+  height: 60px;
+  margin: 0 6px;
+  overflow: hidden;
+}
+
+.tb-thumb li:hover {
+  border: 1px solid #C30008;
+}
+
+.tb-s310 a {
+  height: 418px;
+  width: 418px;
+}
+
+.tb-s310 img {
+  max-height: 418px;
+  max-width: 418px;
+}
+
+.tb-s40 a img {
+  height: 60px;
+  width: 60px;
+}
+
+.tb-booth .zoomIcon {
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  z-index: 2;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.6;
+  color: #333;
+  font-size: 18px;
+  right: 0;
+  bottom: 0;
+}
+
+
+.product-favorite {
+  width: 420px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.product-favorite-item1 {
+  float: left;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  color: #3d72a0;
+}
+
+.product-favorite-item2 {
+  float: right;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+}
+
+/*-------------商品价格购买加入----------*/
+.wrap-right {
+  padding: 0 10px;
+  float: left;
+  color: #666;
+  width: 50%;
+  //border: 1px solid #f2f2f2;
+}
+
+.wrap-right h1 {
+  //margin: 0;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.summary-price-wrap {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.summary-sale {
+  padding: 5px 0;
+}
+
+.summary-sale .dt {
+  line-height: 35px;
+  display: flex;
+  padding-left: 15px;
+
+}
+
+.summary-sale .dd {
+  line-height: 35px;
+  display: flex;
+  padding-left: 15px;
+}
+
+.summary-sale .price {
+  color: #c40000;
+  font-size: 34px;
+  font-weight: bolder;
+  font-family: Arial;
+}
+.summary-sale .price-o {
+    font-size: 34px;
+    font-size: 24px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+
+.summary-sale .comment {
+  float: right;
+  padding: 0 10px 0 0;
+  text-align: center;
+  color: #999;
+}
+
+.summary-sale .comment p {
+  line-height: 15px;
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+
+.summary-sale .comment a:hover {
+  color: #E4393C;
+  text-decoration: none;
+}
+
+
+.tm-ind-panel ul {
+  border: 1px dotted #c9c9c9;
+  border-width: 1px 0;
+  margin-top: 10px;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  display: flex;
+  list-style-type: none;
+}
+
+.tm-ind-panel li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  left: -1px;
+  border-left: 1px solid #e5dfda;
+  flex: 1;
+  line-height: 16px;
+}
+
+.tm-ind-panel .tm-label {
+  display: inline-block;
+  line-height: 16px;
+  color: #999;
+}
+
+.tm-ind-panel .tm-count {
+  display: inline-block;
+  line-height: 16px;
+  height: 16px;
+  color: #c40000;
+  font-weight: 700;
+  margin-left: 3px;
+}
+
+.tb-key {
+  margin: 0 20px 24px 10px;
+}
+
+.tb-skin {
+  padding: 10px 0;
+}
+
+.tb-sku {
+  padding: 5px 0 12px;
+  position: relative;
+}
+
+.tb-amount dd {
+  height: 35px;
+  line-height: 31px;
+  color: #878787;
+}
+
+.tb-metatit,
+.tb-metatit a {
+  color: #999;
+}
+
+.tb-key .tb-metatit a,
+.tb-key .tb-metatit a:visited {
+  color: #816957;
+}
+
+.tb-metatit {
+  text-align: left;
+  float: left;
+  width: 50px;
+}
+
+.tb-key .tb-metatit {
+  color: #838383;
+}
+
+.tb-amount .tb-metatit {
+  margin-top: 6px;
+}
+
+.tb-text {
+  font-size: 12px;
+  margin: 0;
+  height: 36px;
+  border: 1px solid #a7a6ac;
+  width: 43px;
+  background-position: -406px -41px;
+  color: #666;
+}
+
+.tb-text {
+  padding: 2px;
+  line-height: 26px;
+}
+
+
+  .tb-amount-widget .mui-amount-btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tb-amount-widget .mui-amount-decrease,
+.tb-amount-widget .mui-amount-increase {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border: 1px solid #a7a6ab;
+  display: block;
+  line-height: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+.tb-amount-widget .mui-amount-increase {
+  margin-bottom: 3px;
+  padding-top: -2px;
+}
+
+.tb-action {
+  clear: both;
+  padding: 10px 0 0 50px;
+  margin: 10px 0 0;
+}
+
+.tb-btn-buy {
+  margin-right: 10px;
+  float: left;
+}
+
+.tb-btn-buy a {
+  margin-right: 0;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 168px;
+  background-color: #ffeded;
+  border: 1px solid #c40000;
+  color: #c40000;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tb-btn-basket {
+  margin-right: 1px;
+}
+
+.tb-btn-basket a {
+  margin-right: 0;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 168px;
+  background-color: #c40000;
+  border: 1px solid #c40000;
+  color: #fff;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tm-ser {
+  margin: 60px 0 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-size: 12PX;
+}
+
+.tm-ser dl {
+  margin-right: 67px;
+}
+
+.tm-ser dl dt {
+  text-align: left;
+  float: left;
+  width: 66px;
+  color: #999;
+  margin: 0;
+  padding: 0;
+}
+
+.tm-ser dd {
+  margin-left: 50px;
+  width: auto;
+  float: none;
+}
+
+.tm-ser dd ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tm-ser dd ul li {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.tm-ser a {
+  color: #666;
+  text-decoration: none;
+}
+
+
+/*商品详情*/
+.productDecription {
+	width: 970px;
+	margin: 20px auto;
+
+
+}
+
+.productDecription-menuList {
+	height: 36px;
+	background: #f5f5f5;
+  border:1px solid #c1b8b8
+}
+
+.productDecription-menuList-item {
+	float: left;
+	width: 175px;
+	height: 35px;
+  line-height: 35px;
+	background: #f5f5f5;
+  text-align: center;
+  border-right: 1px solid #c1b8b8;
+  border-bottom: 1px solid #c1b8b8;
+}
+
+.productDecription-content {
+	width: 750px;
+	height: 1000px;
+	margin: 50px auto;
+	background: #f5f5f5;
+  text-align: center;
+  border: 1px solid #c1b8b8;
+}
+
+/*-------------product list----------*/
+
+.table {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+
+/*-------------leading page----------*/
+
+/*----- 首页加个大图 ----*/
+
+.jumbotron {
+  background-image:url('header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 50px;
+  margin-top: -80px;
+
+
+}
+
+
+//- 修改文字对齐背景 ->
+
+.title {
+     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+   max-width: 500px;//最大宽度
+   margin-top: 100px;//和顶部拉开距离
+   padding-top: 15px;
+   padding-bottom: 15px;
+   margin-bottom: 0;//这样就可以紧接息面的描述文字
+   border-top-right-radius: 3px;//右上角圆边
+   border-top-left-radius: 3px;//左上角圆边
+   font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+}
+
+  .jumbotron h2, .jumbotron .h2 {
+      text-align: left;//文字左对齐
+      color: #222;  //字体颜色
+      padding: 50px 20px 0;//上50px，左右20px，下0
+  }
+
+  .jumbotron p {
+      margin: 0;//上下左右margin为0
+      font-size: 20px;//字体大小
+      max-width: 500px;//最大宽度
+      background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+      //padding: 20px;//上下左右padding为20px
+      text-align:left;//文字左对齐
+      color: #4E342E;//字体颜色
+      font-weight:bold;
+
+      border-bottom-right-radius: 3px;//右下角圆边
+      border-bottom-left-radius: 3px;//左下角圆边
+  }
+
+.slogan {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 20px;//上下左右padding为20px
+  text-align: center;
+  //color: white;
+  //top: 12px;
+
+}
+
+.slogan1 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 0 20px 50px 200px;
+  //text-align: center;
+  //color: white;
+  //top: 12px;
+
+}
+
+.lead {
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+  padding: 5px 120px ;
+}
+
+//---------Content---------
+
+ .content-section-a {
+      padding: 10px 0;
+       background-color: #eaf8ff;
+      border: 2px solid #43A047;
+  }
+
+  .content-section-b {
+      padding: 50px 0;
+      // border-top: 1px solid #e7e7e7;
+     border-bottom: 1px solid #e7e7e7;
+  }
+
+  .section-heading-spacer {
+      //float: left;
+      text-align: center;
+      width: cover;
+      border-top: 2px solid #e7e7e7;
+      margin-top: 5px
+  }
+
+  .section-heading-spacer-a {
+      //float: left;
+      text-align: center;
+      width: 140px;
+      border-top: 2px solid #43A047;
+      margin-top: 5px
+  }
+
+  .section-heading-a{
+      // text-align:center;
+      // color: #008cba;//字体颜色
+      // font-size: 20px;//字体大小
+      // margin-bottom: 30px;
+      // margin-top: 30px;
+      line-height:150% ;
+      margin: 20px 10px ;
+      text-align: center;
+      top: 5px;
+      font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+      font-size: 16px;
+      font-weight:bold ;
+      letter-spacing:2px ;
+
+  }
+  .section-heading {
+      // text-align:center;
+       color: #008cba;//字体颜色
+      font-size: 20px;//字体大小
+      // margin-bottom: 30px;
+      // margin-top: 30px;
+      margin: 50px 10px 20px ;
+      text-align: center;
+      top: 5px;
+      font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+      // font-size: 16px;
+  }
+  .lead {
+      font-size: 18px;
+      font-weight: 400;
+  }
+
+
+
+
+
+
+//--navabar ->
+
+
+
+
+  @media (min-width: 786px) {
+    .navbar {
+      border-radius: 0; //圆角为0
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+//--让大图满屏显示 ->
+
+  .container-fluid .jumbotron{
+  padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+  margin: -20px -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  border-radius: 0;//圆角为0
+}
+
+//--替换按钮颜色->
+
+  .btn-danger {
+    color: #fff;//字体颜色
+
+    background-color: #9E9D24;//背景颜色
+
+    border-color: #9E9D24;//边框颜色
+
+}
+
+.btn-danger:hover {
+    background-color: #f79f11;//鼠标放置在btn上的背景颜色
+
+    border-color: #f79f11;//鼠标放置在btn上的边框颜色
+
+}
+
+//--修改按钮大小 ->
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 8px 16px;//通过padding来决定btn的大小
+    font-size: 20px;//btn文字大小
+    letter-spacing: 3px;//调整文字间距
+    border-radius: 3px;//btn圆角
+    width: 200px;//这里用指定宽度把btn拉得更长
+}
+
+
+//--设置登录弹窗 ->
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+padding: 30px;
+max-width: 350px;
+width: 100% !important;
+background-color: #F7F7F7;
+margin: 0 auto;
+border-radius: 2px;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+font-family: roboto;
+}
+
+.loginmodal-container h1 {
+text-align: center;
+font-size: 1.8em;
+font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+width: 100%;
+display: block;
+margin-bottom: 10px;
+position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+height: 44px;
+font-size: 16px;
+width: 100%;
+margin-bottom: 10px;
+-webkit-appearance: none;
+background: #fff;
+border: 1px solid #d9d9d9;
+border-top: 1px solid #c0c0c0;
+/* border-radius: 2px; */
+padding: 0 8px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+border: 1px solid #b9b9b9;
+border-top: 1px solid #a0a0a0;
+-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+text-align: center;
+font-size: 14px;
+font-family: 'Arial', sans-serif;
+font-weight: 700;
+height: 36px;
+padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+user-select: none; */
+}
+
+.loginmodal-submit {
+/* border: 1px solid #3079ed; */
+border: 0px;
+color: #fff;
+text-shadow: 0 1px rgba(0,0,0,0.1);
+background-color: #4d90fe;
+padding: 17px 0px;
+font-family: roboto;
+font-size: 14px;
+/* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+/* border: 1px solid #2f5bb7; */
+border: 0px;
+text-shadow: 0 1px rgba(0,0,0,0.3);
+background-color: #357ae8;
+/* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+text-decoration: none;
+color: #666;
+font-weight: 400;
+text-align: center;
+display: inline-block;
+opacity: 0.6;
+transition: opacity ease 0.5s;
+}
+
+.login-help{
+font-size: 12px;
+}
+
+
+//- 增加三张图片 ->
+
+.caption {
+margin: 10px;
+text-align: center;
+top: 5px;
+font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+font-size: 16px;
+}
+
+.thumbnail {
+  border: 0 none;
+  box-shadow: none;
+  margin-top: 10px;
+
+}
+
+.thumbnail-a{
+  border: 0 none;
+  box-shadow: none;
+  margin-top: 0;
+  // padding-top: -20px ;
+  // text-align: center;
+}
+
+.content-section-b {
+    padding: 15px ;
+    background-color: #edece8;
+
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-help{
+  font-size: 12px;
 }

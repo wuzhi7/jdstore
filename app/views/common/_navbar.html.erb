@@ -1,65 +1,18 @@
-<!-- <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <!-- <div class="navbar-header">
-            <a class="navbar-brand" href="/">JDStore </a>
-        </div> -->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <%= link_to("Products", products_path) %>
-            </li>
-          </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                 <%= link_to carts_path do  %>
-                    购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-                 <% end %>
-              </li>
-              <% if !current_user %>
-                  <li><%= link_to("注册", new_user_registration_path) %> </li>
-                  <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
-                <% else %>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Hi!, <%= current_user.email %>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <% if current_user.admin? %>
-                        <li>
-                          <%= link_to("Admin 选单", admin_products_path ) %>
-                        </li>
-                      <% end %>
-                      <li>
-                        <%= link_to("个人订单列表", account_orders_path ) %>
-                      </li>
-                        <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
-                    </ul>
-                  </li>
-                <% end %>
-            </ul>
-        </div> -->
-        <!-- /.navbar-collapse -->
-    <!-- </div>
-    <!-- /.container-fluid -->
-<!-- </nav> -->
 <!-- /.导航栏第一列 -->
 <div class="navbar-wrap">
   <div class="navbar">
     <div class="navbar-left">
-      <%=link_to("欢迎来到！", products_path)%>
+      <%=link_to("摇摆吧！Cheers", products_path)%>
     </div>
     <ul class="navbar-list">
       <% if !current_user %>
         <li class="navbar-listItem">
-          <%= link_to("注册", new_user_registration_path) %>
+          <a href="#" data-toggle="modal" data-target="#signup-modal">注册</a>
         </li>
         <li class="navbar-spacer"></li>
         <li class="navbar-listItem">
-          <%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %>
+          <a href="#" data-toggle="modal" data-target="#login-modal">登入<i class="fa fa-sign-i" aria-hidden="true"></i></a>
         </li>
       <% end %>
       <% if current_user %>
@@ -91,7 +44,7 @@
 <div class="header">
   <div class="headerContent">
     <div class="headerContent-item headerContent-item1">
-      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >BB-Fly</a>
+      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' ></a>
     </div>
     <div class="headerContent-item headerContent-item2">
       <div class="nav navbar-nav navbar-center">
@@ -127,7 +80,7 @@
 
 
 <!-- /.导航栏第三列 -->
-<div class="menu bg-color1">
+<div class="menu">
   <div class="menuList">
     <div class="menuList-item ">
       <li class="active">
@@ -153,6 +106,45 @@
       <li class="active">
         <%= link_to("啤酒", category4_products_path) %>
       </li>
+    </div>
+  </div>
+</div>
+
+
+<!-- 以下代码添加在最后 -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="loginmodal-container">
+       <h2>Log in</h2>
+       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         <div class="form-inputs">
+           <%= f.input :email, required: false, autofocus: true %>
+           <%= f.input :password, required: false %>
+           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+         </div>
+         <div class="form-actions">
+           <%= f.button :submit, "Log in" %>
+         </div>
+       <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h2>Sign up</h2>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true %>
+        </div>
+        <div class="form-actions">
+            <%= f.button :submit, "Sign up" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

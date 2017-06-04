@@ -2,23 +2,25 @@
 <div class="pull-right" style="padding-bottom: 20px;">
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
 </div>
-<table class="table table-bordered">
+<table class="table table-bordered table-striped custab">
+
   <thead>
     <tr>
-      <th>#</th>
-      <th width="220">Product Pic</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th width="100"> Options</th>
+      <th class="text-center" width="60">#</th>
+      <th class="text-center" width="220">Product Pic</th>
+      <th class="text-center" width="100">Name</th>
+      <th class="text-center" width="100">Price</th>
+      <th class="text-center" width="100">Quantity</th>
+      <th class="text-center" width="120"> Options</th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td>
+        <td class="text-center align-middle">
           <%= product.id %>
         </td>
-        <td>
+        <td class="text-center">
           <%= link_to product_path(product) do %>
             <% if product.image.present? %>
               <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -27,18 +29,25 @@
             <% end %>
           <% end %>
         </td>
-        <td>
+        <td class="text-center">
           <%= product.title %>
         </td>
-        <td>
+        <td class="text-center">
           <%= product.price %>
         </td>
-        <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
-          <%= link_to "向上", move_up_admin_product_path(product), method: :patch %>
-          <%= link_to "向下", move_down_admin_product_path(product), method: :patch %>
+        <td class="text-center">
+          <%= product.quantity %>
+        </td>
+        <td class="text-center">
+          <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
+          <%= link_to move_up_admin_product_path(product), method: :patch ,class: "btn btn-xs btn-success" do %><i class="fa fa-upload" aria-hidden="true"></i><% end %>
+          <%= link_to move_down_admin_product_path(product), method: :patch, class: "btn btn-xs btn-warning" do %><i class="fa fa-download" aria-hidden="true"></i><% end %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<div class="text-center">
+  <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
+</div>
