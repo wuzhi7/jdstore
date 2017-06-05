@@ -1,3 +1,0 @@
-module Account::ProductsHelper
-  
-end
