@@ -3,8 +3,25 @@
 <div class="navbar-wrap">
   <div class="navbar">
     <div class="navbar-left">
-      <%=link_to("摇摆吧！Cheers", products_path)%>
+      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>'> </a>
+
     </div>
+
+    <div class="nav navbar-nav navbar-center">
+
+    <%= form_tag search_products_path , :method => :get  do %>
+
+        <div class="input-group" id="search-id" >
+          <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入关键字">
+          <div class="input-group-btn">
+            <button class="btn btn-info" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
     <ul class="navbar-list">
       <% if !current_user %>
         <li class="navbar-listItem">

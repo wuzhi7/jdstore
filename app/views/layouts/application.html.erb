@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JDStore </title>
+        <title>微醺 · 一杯美酒放下戒备 </title>
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,9 +12,11 @@
     <body>
 
         <div class="container-fluid">
+          <div class="row">
             <%= render "common/navbar" %>
             <%= render "common/flashes" %>
             <%= yield %>
+          </div>
         </div>
 
         <%= render "common/footer" %>
