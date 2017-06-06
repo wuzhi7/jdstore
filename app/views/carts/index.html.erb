@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-8 col-md-offset-2">
 
     <%= link_to("清空购物车", clean_carts_path ,
                method: :delete , class: "pull-right",
@@ -9,20 +9,20 @@
 
     <h2> 购物车 </h2>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped custab">
       <thead>
         <tr>
-          <th colspan="2">商品资讯</th>
-          <th>单价</th>
-          <th>数量</th>
-          <th>操作选项 </th>
+          <th colspan="2" class="text-center">商品资讯</th>
+          <th class="text-center" width="120">单价</th>
+          <th class="text-center" width="150">数量</th>
+          <th class="text-center" width="150">操作选项 </th>
         </tr>
       </thead>
       <tbody>
 
         <% current_cart.cart_items.each do |cart_item| %>
           <tr>
-            <td>
+            <td class="text-center" style="vertical-align: middle" width="200">
               <%= link_to product_path(cart_item.product) do %>
                 <% if cart_item.product.image.present? %>
                   <%= image_tag(cart_item.product.image.thumb.url, class: "thumbnail") %>
@@ -31,19 +31,19 @@
                 <% end %>
               <% end %>
             </td>
-            <td>
-              <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
+            <td class="text-center" style="vertical-align: middle">
+              <%= link_to(cart_item.product.description, product_path(cart_item.product)) %>
             </td>
-            <td>
+            <td class="text-center" style="vertical-align: middle">
               <%= cart_item.product.price %>
             </td>
-            <td>
+            <td class="text-center" style="vertical-align: middle">
               <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
                 <%= f.select :quantity, 1..cart_item.product.quantity %>
                 <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
               <% end %>
             </td>
-            <td>
+            <td class="text-center" style="vertical-align: middle">
               <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
                 <i class="fa fa-trash"></i>
               <% end %>
