@@ -14,7 +14,7 @@
         <div class="input-group" id="search-id" >
           <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入关键字">
           <div class="input-group-btn">
-            <button class="btn btn-info" type="submit">
+            <button class="btn btn-warning" type="submit">
               <i class="glyphicon glyphicon-search"></i>
             </button>
           </div>
@@ -23,6 +23,11 @@
       </div>
 
     <ul class="navbar-list">
+      <li class="navbar-listItem">
+         <%= link_to carts_path do  %>
+            &nbsp;&nbsp;|&nbsp;&nbsp;购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+         <% end %>
+      </li>
       <% if !current_user %>
         <li class="navbar-listItem">
           <a href="#" data-toggle="modal" data-target="#signup-modal">注册</a>
@@ -48,6 +53,9 @@
                 <li>
                   <%= link_to("个人订单列表", account_orders_path ) %>
                 </li>
+                <li>
+                  <%= link_to(content_tag(:i, "我的收藏", class: "fa fa-heart fa-md"),  favorite_index_path)%>
+                </li>
                 <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
             </ul>
           </li>
@@ -57,46 +65,10 @@
   </div>
 </div>
 
+
+
+
 <!-- /.导航栏第二列 -->
-<div class="header">
-  <div class="headerContent">
-    <div class="headerContent-item headerContent-item1">
-      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' ></a>
-    </div>
-    <div class="headerContent-item headerContent-item2">
-      <div class="nav navbar-nav navbar-center">
-
-      <%= form_tag search_products_path , :method => :get  do %>
-
-          <div class="input-group" id="search-id" >
-            <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入关键字">
-            <div class="input-group-btn">
-              <button class="btn btn-info" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </div>
-          </div>
-          <% end %>
-        </div>
-    </div>
-    <div class="headerContent-item headerContent-item3">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-listItem">
-          <%= link_to(content_tag(:i, "我的收藏", class: "fa fa-heart fa-md"),  favorite_index_path)%>
-        </li>
-        <li class="navbar-spacer"></li>
-        <li class="navbar-listItem">
-           <%= link_to carts_path do  %>
-              购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-           <% end %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<!-- /.导航栏第三列 -->
 <div class="menu">
   <div class="menuList">
     <div class="menuList-item ">
