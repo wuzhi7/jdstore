@@ -17,10 +17,10 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td class="text-center align-middle">
+        <td class="text-center" style="vertical-align: middle">
           <%= product.id %>
         </td>
-        <td class="text-center">
+        <td class="text-center" style="vertical-align: middle">
           <%= link_to product_path(product) do %>
             <% if product.image.present? %>
               <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -29,16 +29,16 @@
             <% end %>
           <% end %>
         </td>
-        <td class="text-center">
+        <td class="text-center" style="vertical-align: middle">
           <%= product.title %>
         </td>
-        <td class="text-center">
+        <td class="text-center" style="vertical-align: middle">
           <%= product.price %>
         </td>
-        <td class="text-center">
+        <td class="text-center" style="vertical-align: middle">
           <%= product.quantity %>
         </td>
-        <td class="text-center">
+        <td class="text-center" style="vertical-align: middle">
           <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
           <%= link_to move_up_admin_product_path(product), method: :patch ,class: "btn btn-xs btn-success" do %><i class="fa fa-upload" aria-hidden="true"></i><% end %>
           <%= link_to move_down_admin_product_path(product), method: :patch, class: "btn btn-xs btn-warning" do %><i class="fa fa-download" aria-hidden="true"></i><% end %>
