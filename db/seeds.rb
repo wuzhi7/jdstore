@@ -82,6 +82,8 @@
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/MVRiJ81er3hjY9NVLEhb1*2MZ7fRYhufqg*W56hLfKI!/b/dGoBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4")
     )
 
+
+
   Product.create!(title: "wine9",
     description: "Gordon",
     price: 79,
