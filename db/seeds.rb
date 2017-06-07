@@ -62,7 +62,7 @@
     )
 
   Product.create!(title: "wine6",
-    description: "Absolut VODKAhttp://a3.qpic.cn/psb?/V13Obk462MXIb5/xloGXTI6DKxvx1FIfsDASsEI7.d8Dt3eRQpxFvPzGEE!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4",
+    description: "Absolut VODKA",
     price: 108,
     quantity: 898,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/5i.6TRLuKApmBL6a8JkTAhqoCJniSQRx5hWXN5uFwQc!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
