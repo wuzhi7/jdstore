@@ -89,7 +89,7 @@
 
 .navbar-spacer {
   float: left; /*同样的，你也要float*/
-  width: 1px; /*宽度为1，就可以拿到当分隔符用了，哈哈*/
+  width: 20px; /*宽度为1，就可以拿到当分隔符用了，哈哈*/
   height: 12px; /*12px差不多，刚刚好*/
   margin-top: 9px; /*调一下上边距*/
   background: #17181c; /*分隔符的背景颜色*/
@@ -114,7 +114,7 @@
 /*主体页面*/
 .body {
   width: 100%; /*铺满屏幕*/
-  background: #ffffff;
+  background: #f4f4f4;
 
 }
 
@@ -273,6 +273,7 @@ width: 300px;
   margin-right: 10px;
   margin-bottom: 10px;
   background: #ffffff; /*背景颜色*/
+  border:1px solid #c1b8b8
 }
 
 .productlist-item-a {
@@ -341,7 +342,9 @@ body {
     transform: translatex(-50%);
 
   }
-.input-group-btn {
+.btn {
+  background: #ffffff;
+  
 
 }
 

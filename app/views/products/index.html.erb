@@ -1,7 +1,7 @@
 <!-- /.头图 -->
 <div class="body">
 <div class="carousel">
-  <img src="http://a2.qpic.cn/psb?/V13Obk462MXIb5/tuF4eLuhmZBZUKKfOGAK6IxSLEtehh5ZF*biiypTUiA!/b/dBgBAAAAAAAA&bo=wAOAAgAAAAARB3E!&rf=viewer_4" alt="search" class="img-responsive" width="970" height="4">
+  <img src="http://a3.qpic.cn/psb?/V13Obk462MXIb5/Etn.HKyf1hEinmt6rVjnj7z98b1REjFAksTueCMrYLA!/b/dBkBAAAAAAAA&bo=ygOQAQAAAAARB2g!&rf=viewer_4" alt="search" class="img-responsive" width="970" height="4">
 </div>
 
 <!-- /.排序 -->
@@ -47,7 +47,7 @@
       </p>
       <p>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             描述: <%= product.description %>
           </div>
 
@@ -58,4 +58,9 @@
   <% end %>
 </div>
 </div>
+</div>
+
+
+<div class="text-center">
+  <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
 </div>
