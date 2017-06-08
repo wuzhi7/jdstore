@@ -30,6 +30,8 @@
     description: "yamazaki",
     price: 980,
     quantity: 500,
+    category: "category1",
+    sale_count: 434,
     image: open("http://a1.qpic.cn/psb?/V13Obk462MXIb5/KiuB7FTZIe4AGow.K636QlJJKRiD6zNk5tYr36KLo4M!/b/dGsBAAAAAAAA&bo=rgGuAQAAAAARBzA!&rf=viewer_4")
     )
 
@@ -37,6 +39,8 @@
     description: "JackDaniel's",
     price: 155,
     quantity: 380,
+    category: "category1",
+    sale_count: 596,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/LTg0e2Qp9IbsZAiIkKCAqJzJNby6bkOnuDTP06xtbxU!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -44,6 +48,8 @@
     description: "CHIVAS",
     price: 159,
     quantity: 450,
+    category: "category1",
+    sale_count: 5959,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/quC5kVE1RS6gk0PkezGMivejWJ5f9t.oCeo1sG9Ys44!/b/dFUBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -51,6 +57,8 @@
     description: "Ballantine's",
     price: 149,
     quantity: 7600,
+    category: "category1",
+    sale_count: 846,
     image: open("http://a2.qpic.cn/psb?/V13Obk462MXIb5/7wTbc28HHBMoMQq9E11I*5kjRooGfeRdwfZWVVxt3v8!/b/dGkBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -58,6 +66,8 @@
     description: "SKYY",
     price: 79,
     quantity: 545,
+    category: "category2",
+    sale_count: 8547,
     image: open("http://a1.qpic.cn/psb?/V13Obk462MXIb5/Ezgd3NEb4mMrnf7roS8lcY2vwXTEV*2Rv5.TCLOCCnc!/b/dGsBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -65,6 +75,8 @@
     description: "Absolut VODKA",
     price: 108,
     quantity: 898,
+    category: "category2",
+    sale_count: 485,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/5i.6TRLuKApmBL6a8JkTAhqoCJniSQRx5hWXN5uFwQc!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -72,6 +84,8 @@
     description: "patron",
     price: 499,
     quantity: 89,
+    category: "category3",
+    sale_count: 488,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/pZob5QwaG35apaA*AtpNegq*yhHGvRdlTUrTYGN9QT0!/b/dGoBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4")
     )
 
@@ -79,6 +93,8 @@
     description: "CASA NOBLE TEQUILA",
     price: 1199,
     quantity: 795,
+    category: "category3",
+    sale_count: 585,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/MVRiJ81er3hjY9NVLEhb1*2MZ7fRYhufqg*W56hLfKI!/b/dGoBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4")
     )
 
@@ -88,6 +104,8 @@
     description: "Gordon",
     price: 79,
     quantity: 59,
+    category: "category4",
+    sale_count: 233,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/xloGXTI6DKxvx1FIfsDASsEI7.d8Dt3eRQpxFvPzGEE!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -95,6 +113,8 @@
     description: "HENDRICK'S GIN",
     price: 349,
     quantity: 84,
+    category: "category4",
+    sale_count: 8455,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/v.9Q2LDPiFZXTw.K4jKq4wK4Ya5Rf1SXEpPAtruCmwM!/b/dGoBAAAAAAAA&bo=XwGQAQAAAAARAPg!&rf=viewer_4")
     )
 
@@ -102,6 +122,8 @@
     description: "XO",
     price: 1688,
     quantity: 844,
+    category: "category4",
+    sale_count: 888,
     image: open("http://a3.qpic.cn/psb?/V13Obk462MXIb5/SQfrIN2SlQbgJM8NyNuut4jzaidPRu5kMh2TtCjW1Rk!/b/dGoBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
 
@@ -109,5 +131,7 @@
     description: "VSOP",
     price: 488,
     quantity: 87,
+    category: "category4",
+    sale_count: 851,
     image: open("http://a1.qpic.cn/psb?/V13Obk462MXIb5/7CRHj2Ft3ORW1ZpLTZO8JBr5zQSLzQ8uR6SsAI4.nQI!/b/dGsBAAAAAAAA&bo=rgGuAQAAAAARADc!&rf=viewer_4")
     )
