@@ -8,13 +8,13 @@ class ProductsController < ApplicationController
   def index
     @products = case params[:order]
       when 'by_upper_price'
-        Product.all.order('price ASC')
+        Product.all.order('price ASC').paginate(:page => params[:page], :per_page => 12)
       when 'by_down_price'
-        Product.all.order('price DESC')
+        Product.all.order('price DESC').paginate(:page => params[:page], :per_page => 12)
       when 'by_down_sale_count'
-        Product.all.order('sale_count DESC')
+        Product.all.order('sale_count DESC').paginate(:page => params[:page], :per_page => 12)
      else
-        Product.all.order("position ASC")
+        Product.all.order("position ASC").paginate(:page => params[:page], :per_page => 12)
      end
   end
 

@@ -14,7 +14,7 @@
         <div class="input-group" id="search-id" >
           <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入关键字">
           <div class="input-group-btn">
-            <button class="btn btn-warning" type="submit">
+            <button class="btn" type="submit">
               <i class="glyphicon glyphicon-search"></i>
             </button>
           </div>
@@ -23,22 +23,25 @@
       </div>
 
     <ul class="navbar-list">
-      <li class="navbar-listItem">
+      <!-- <li class="navbar-listItem"> -->
+      <li>
          <%= link_to carts_path do  %>
             &nbsp;&nbsp;|&nbsp;&nbsp;购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
          <% end %>
       </li>
       <% if !current_user %>
-        <li class="navbar-listItem">
+        <!-- <li class="navbar-listItem"> -->
+        <li>
           <a href="#" data-toggle="modal" data-target="#signup-modal">注册</a>
         </li>
         <li class="navbar-spacer"></li>
-        <li class="navbar-listItem">
+        <li>
+        <!-- <li class="navbar-listItem"> -->
           <a href="#" data-toggle="modal" data-target="#login-modal">登入<i class="fa fa-sign-i" aria-hidden="true"></i></a>
         </li>
       <% end %>
       <% if current_user %>
-        <li class="navbar-listItem">
+        <!-- <li class="navbar-listItem"> -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Hi!, <%= current_user.email %>
@@ -59,7 +62,7 @@
                 <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
             </ul>
           </li>
-        </li>
+        <!-- </li> -->
       <% end %>
     </ul>
   </div>
@@ -78,22 +81,22 @@
     </div>
     <div class="menuList-item">
       <li class="active">
-        <%= link_to("红酒", category1_products_path) %>
+        <%= link_to("Whisky", category1_products_path) %>
       </li>
     </div>
     <div class="menuList-item">
       <li class="active">
-        <%= link_to("白酒", category2_products_path) %>
+        <%= link_to("Vodka", category2_products_path) %>
       </li>
     </div>
     <div class="menuList-item">
       <li class="active">
-        <%= link_to("清酒", category3_products_path) %>
+        <%= link_to("Tequila", category3_products_path) %>
       </li>
     </div>
     <div class="menuList-item">
       <li class="active">
-        <%= link_to("啤酒", category4_products_path) %>
+        <%= link_to("Brandy", category4_products_path) %>
       </li>
     </div>
   </div>
