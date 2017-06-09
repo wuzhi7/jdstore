@@ -13,14 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require bootstrap/alert
+
 //= require bootstrap/dropdown
 //= require autosize.min
 //= require wow.min
 //= require bootstrap/modal
+
 //= require_tree .
 
 
 $(document).ready(function(){
   new WOW().init();
 })
+
+/*===== 首页导览列变化特效 =====*/
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 125) {  //当画面高度至125px时触发效果
+		$('#navbar').addClass('scroll_navbar')  //navbar 增加 scroll_navbar CSS
+	} else {
+		$('#navbar').removeClass('scroll_navbar') //navbar 移除 scroll_navbar CSS
+	}
+}) 
