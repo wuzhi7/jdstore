@@ -1,97 +1,301 @@
-<div class="jumbotron">
-    <h2 class="title">BB-FLy</h2>
-    <p class="slogan">Beyond your expectation
-    </p>
-    <p class="slogan1">Fly for better yourself
-    </p>
-    <p class="lead"><a class="btn btn-lg btn-success" href="/jobs">Sail</a></p>
-  </div>
+<div class="welcome-box">
+  <!--===== 广告轮播 =====-->
+  <section class="intro-box">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="intro" class="carousel slide" data-ride="carousel">
+          <!--===== 轮播按钮 =====-->
+          <ol class="carousel-indicators">
+            <li data-target="#intro" data-slide-to="0" class="active"></li>
+            <li data-target="#intro" data-slide-to="1"></li>
+            <li data-target="#intro" data-slide-to="2"></li>
+          </ol>
 
+          <!--===== 轮播内容 =====-->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
+                <div class="carousel-caption">
+                  <h3>微醺口号1</h3> <!-- 标题 -->
+                  <p>别着急，还没想好！</p> <!-- 内文 -->
+                </div>
+              <% end %>
+            </div>
+            <div class="item">
+              <%= link_to '#', target: "_blank" do %>
+                <%= image_tag("intro_2.jpg") %>
+                <div class="carousel-caption">
+                  <h3>创造美食</h3>
+                  <p>别着急，还没想好！</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="item">
+              <%= link_to '#', target: "_blank" do %>
+                <%= image_tag("intro_3.jpg") %>
+                <div class="carousel-caption">
+                  <h3>别着急，还没想好！</h3>
+                  <p>别着急，还没想好！</p>
+                </div>
+              <% end %>
+            </div>
+          </div>
 
-  <div class="container-fluid">
-  <hr class="section-heading-spacer">
-</div>
-
-<div class="container">
-      <div class="row">
-        <div class="col-md-9 col-centered">
-          <!-- <hr class="section-heading-spacer"> -->
-          <div class="clearfix"></div>
-          <h2 class="section-heading">我们的使命</h2>
-          <hr class="section-heading-spacer-a">
+          <!--===== 换页按钮 =====-->
+          <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span> <!-- 左侧按钮图示 -->
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#intro" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span> <!-- 右侧按钮图示 -->
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-      </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-  <div class = "col-md-6 col-centered">
-
-
-      <!-- <div class="col-sm-4 "> -->
-        <div class="section-heading-a">
-          <div class="content-section-a">
-          <p>工作不仅仅是一份差事，是一份创造，是自我的进步，更是对社会价值的体现。</p>
-          <p>这里我们提供优质的工作，只为热爱工作的你，发挥你最大的价值，更好的生活配得上更好的你！</p>
-        </div>
-        </div>
-        <div class="thumbnail">
-        <%= image_tag 'boat-2.png', class: 'img-responsive' %>
-
-
       </div>
     </div>
-  </div>
-</div>
-  <div class="container-fluid">
-    <hr class="section-heading-spacer">
-  </div>
+  </section>
 
-  <div class="container">
-      <div class="row">
-        <div class="col-md-9 col-centered">
-          <!-- <hr class="section-heading-spacer"> -->
-          <div class="clearfix"></div>
-          <h2 class="section-heading">在这里遇见更好的自己</h2>
-          <hr class="section-heading-spacer-a">
-        </div>
-      </div>
-</div>
-
-
-<div class="container">
-      <div class="row">
-      <div class = "col-md-9 col-centered">
-        <div class="content-section-b">
-
+  <!--===== 品牌故事 =====-->
+  <section class="story-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>品牌内涵</h2> <!-- 区块标题 -->
+        <h1>没想好！</h1> <!-- 品牌名称 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
         <div class="row">
-          <div class="col-sm-4 ">
-            <div class="thumbnail">
-            <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
-              <div class="caption">
-                <p>放飞的自由</p>
-              </div>
-            </div>
+          <div class="col-md-3 col-md-offset-1">
+            <%= image_tag("founder_1.png") %> <!-- 创办人头像 1 -->
           </div>
-          <div class="col-sm-4 ">
-            <div class="thumbnail">
-              <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
-              <div class="caption">
-                <p>工作的乐趣</p>
-              </div>
-            </div>
+          <div class="col-md-7">
+            <h3>Victor</h3> <!-- 创办人姓名 -->
+            <p>没想好！没想好！没想好！没想好！没想好！ </p> <!-- 创办人介绍 -->
           </div>
-          <div class="col-sm-4">
-            <div class="thumbnail">
-              <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
-              <div class="caption">
-                <p>更好的自己</p>
-              </div>
-            </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-7 col-md-offset-1">
+            <h3>Kelly</h3> <!-- 创办人姓名 -->
+            <p>没想好！没想好！没想好！没想好！ </p> <!-- 创办人介绍 -->
+          </div>
+          <div class="col-md-3">
+            <%= image_tag("founder_2.png") %> <!-- 创办人头像 2 -->
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!--===== 服务优势 =====-->
+<section class="service-box">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>服务优势</h2> <!-- 副标题 -->
+      <div class="short-line"></div> <!-- 分隔线 -->
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="box">
+            <%= image_tag("service_1.png") %> <!-- 图示 -->
+            <h3>品质保证</h3> <!-- 标题 -->
+            <p>本店的商品皆通过市场验证，使用最高级的材料制作而成，品质为业界领先标准。</p> <!-- 内文 -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="box">
+            <%= image_tag("service_2.png") %>
+            <h3>快速送达</h3>
+            <p>全国皆享有当天下单、隔日送达的服务，过程中有任何损坏皆由我们负责，请放心购买。</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="box">
+            <%= image_tag("service_3.png") %>
+            <h3>安心使用</h3>
+            <p>设计皆考量人体工学及真实使用情境，使用起来更安心。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+<!--===== 推荐商品 =====-->
+<section class="show-box">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>推荐商品</h2> <!-- 副标题 -->
+      <div class="short-line"></div> <!-- 分隔线 -->
+      <div class="row">
+        <div class="col-md-3">
+          <%= link_to '#' do %> <!-- 商品连结 -->
+            <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
+            <div class="content">
+              <p>两手锅</p> <!-- 商品名称 -->
+              <p>$550</p> <!-- 商品价格 -->
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_2.jpg") %></div>
+            <div class="content">
+              <p>平底锅</p>
+              <p>$750</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_3.jpg") %></div>
+            <div class="content">
+              <p>铁制茶壶</p>
+              <p>$450</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_4.jpg") %></div>
+            <div class="content">
+              <p>茶壶</p>
+              <p>$250</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_5.jpg") %></div>
+            <div class="content">
+              <p>八角点心盘</p>
+              <p>$150</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_6.jpg") %></div>
+            <div class="content">
+              <p>点心盘</p>
+              <p>$80</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_7.jpg") %></div>
+            <div class="content">
+              <p>木盘</p>
+              <p>$125</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_8.jpg") %></div>
+            <div class="content">
+              <p>酱料碟</p>
+              <p>$20</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_9.jpg") %></div>
+            <div class="content">
+              <p>酱料碟</p>
+              <p>$50</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_10.jpg") %></div>
+            <div class="content">
+              <p>马克杯</p>
+              <p>$80</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_11.jpg") %></div>
+            <div class="content">
+              <p>陶锅</p>
+              <p>$650</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_12.jpg") %></div>
+            <div class="content">
+              <p>8号锅</p>
+              <p>$500</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== 用户反馈 =====-->
+<section class="feedback-box">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2>用户反馈</h2> <!-- 副标题 -->
+      <div class="short-line"></div> <!-- 分隔线 -->
+      <div id="feedback" class="carousel slide" data-ride="carousel">
+        <!--===== 轮播按钮 =====-->
+        <ol class="carousel-indicators">
+          <li data-target="#feedback" data-slide-to="0" class="active"></li>
+          <li data-target="#feedback" data-slide-to="1"></li>
+          <li data-target="#feedback" data-slide-to="2"></li>
+        </ol>
+
+        <!--===== 轮播内容 =====-->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <p>这是我用过最好的网站，商品众多、下单方便、送货快速，还能订制特殊规格的锅具，强力推荐。</p>
+            <%= image_tag("feedback_1.png") %> <!-- 图片 -->
+            <strong>Eddie - 上班族</strong> <!-- 介绍 -->
+          </div>
+          <div class="item">
+            <p>我是这网站的忠实用户，已经在这买好几年了，质量一直很好，而且不定时会有折扣，真的很划算！</p>
+            <%= image_tag("feedback_2.png") %>
+            <strong>Anna - 家庭主妇</strong>
+          </div>
+          <div class="item">
+            <p>身为一个学生，预算不太多，却也能在这找到便宜又有设计感的器皿，让我生活又添加一份乐趣。</p>
+            <%= image_tag("feedback_3.png") %>
+            <strong>Kobe - 大学生</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--===== 合作品牌 =====-->
+<section class="brand-box">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>合作品牌</h2> <!-- 副标题 -->
+      <div class="short-line"></div> <!-- 分隔线 -->
+      <%= image_tag("brand_1.png") %> <!-- 品牌图片 -->
+      <%= image_tag("brand_2.png") %>
+      <%= image_tag("brand_3.png") %>
+      <%= image_tag("brand_4.png") %>
+      <%= image_tag("brand_5.png") %>
+      <%= image_tag("brand_6.png") %>
+      <%= image_tag("brand_7.png") %>
+      <%= image_tag("brand_8.png") %>
+      <%= image_tag("brand_9.png") %>
+    </div>
+  </div>
+</section>
+
+<!--===== 立即购买 =====-->
+<section class="push-box">
+  <%= link_to('立即购买', '#', class:'btn btn-push' ) %>
+</section>
+</div>
