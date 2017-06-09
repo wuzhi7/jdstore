@@ -18,6 +18,8 @@
 //= require autosize.min
 //= require wow.min
 //= require bootstrap/modal
+//= require turbolinks
+//= require bootstrap
 //= require_tree .
 
 
