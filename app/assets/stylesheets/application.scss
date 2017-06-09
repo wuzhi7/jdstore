@@ -202,9 +202,10 @@ width: 300px;
 
 
 
-.menuList-item :hover,
-.menuList-item :visited {
-  background-color: #c16968; //鼠标放置在链接上的背景颜色
+
+.menuList-item :visited,
+.menuList-item :focus {
+
   text-decoration: none; /*不要下划线啦，好丑*/
 }
 
@@ -344,7 +345,9 @@ body {
   }
 .btn {
   background: #ffffff;
-  
+
+
+
 
 }
 
@@ -859,339 +862,8 @@ div.zoomMask {
   transition: 0.5s;
 }
 
-/*-------------leading page----------*/
-
-/*----- 首页加个大图 ----*/
-
-.jumbotron {
-  background-image:url('header.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  margin-bottom: 50px;
-  margin-top: -80px;
-
-
-}
-
-
-//- 修改文字对齐背景 ->
-
-.title {
-     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-   max-width: 500px;//最大宽度
-   margin-top: 100px;//和顶部拉开距离
-   padding-top: 15px;
-   padding-bottom: 15px;
-   margin-bottom: 0;//这样就可以紧接息面的描述文字
-   border-top-right-radius: 3px;//右上角圆边
-   border-top-left-radius: 3px;//左上角圆边
-   font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-}
-
-  .jumbotron h2, .jumbotron .h2 {
-      text-align: left;//文字左对齐
-      color: #222;  //字体颜色
-      padding: 50px 20px 0;//上50px，左右20px，下0
-  }
-
-  .jumbotron p {
-      margin: 0;//上下左右margin为0
-      font-size: 20px;//字体大小
-      max-width: 500px;//最大宽度
-      background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-      //padding: 20px;//上下左右padding为20px
-      text-align:left;//文字左对齐
-      color: #4E342E;//字体颜色
-      font-weight:bold;
-
-      border-bottom-right-radius: 3px;//右下角圆边
-      border-bottom-left-radius: 3px;//左下角圆边
-  }
-
-.slogan {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  padding: 20px;//上下左右padding为20px
-  text-align: center;
-  //color: white;
-  //top: 12px;
-
-}
-
-.slogan1 {
-  margin-top: 0;
-  margin-bottom: 50px;
-  padding: 0 20px 50px 200px;
-  //text-align: center;
-  //color: white;
-  //top: 12px;
-
-}
-
-.lead {
-  margin-bottom: 60px;
-  text-align: center;
-  color: white;
-  padding: 5px 120px ;
-}
-
-//---------Content---------
-
- .content-section-a {
-      padding: 10px 0;
-       background-color: #eaf8ff;
-      border: 2px solid #43A047;
-  }
-
-  .content-section-b {
-      padding: 50px 0;
-      // border-top: 1px solid #e7e7e7;
-     border-bottom: 1px solid #e7e7e7;
-  }
-
-  .section-heading-spacer {
-      //float: left;
-      text-align: center;
-      width: cover;
-      border-top: 2px solid #e7e7e7;
-      margin-top: 5px
-  }
-
-  .section-heading-spacer-a {
-      //float: left;
-      text-align: center;
-      width: 140px;
-      border-top: 2px solid #43A047;
-      margin-top: 5px
-  }
-
-  .section-heading-a{
-      // text-align:center;
-      // color: #008cba;//字体颜色
-      // font-size: 20px;//字体大小
-      // margin-bottom: 30px;
-      // margin-top: 30px;
-      line-height:150% ;
-      margin: 20px 10px ;
-      text-align: center;
-      top: 5px;
-      font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-      font-size: 16px;
-      font-weight:bold ;
-      letter-spacing:2px ;
-
-  }
-  .section-heading {
-      // text-align:center;
-       color: #008cba;//字体颜色
-      font-size: 20px;//字体大小
-      // margin-bottom: 30px;
-      // margin-top: 30px;
-      margin: 50px 10px 20px ;
-      text-align: center;
-      top: 5px;
-      font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-      // font-size: 16px;
-  }
-  .lead {
-      font-size: 18px;
-      font-weight: 400;
-  }
-
-
-
-
-
-
-//--navabar ->
-
-
-
-
-  @media (min-width: 786px) {
-    .navbar {
-      border-radius: 0; //圆角为0
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-//--让大图满屏显示 ->
-
-  .container-fluid .jumbotron{
-  padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
-  margin: -20px -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-  border-radius: 0;//圆角为0
-}
-
-//--替换按钮颜色->
-
-  .btn-danger {
-    color: #fff;//字体颜色
-
-    background-color: #9E9D24;//背景颜色
-
-    border-color: #9E9D24;//边框颜色
-
-}
-
-.btn-danger:hover {
-    background-color: #f79f11;//鼠标放置在btn上的背景颜色
-
-    border-color: #f79f11;//鼠标放置在btn上的边框颜色
-
-}
-
-//--修改按钮大小 ->
-  .btn-lg, .btn-group-lg > .btn {
-    padding: 8px 16px;//通过padding来决定btn的大小
-    font-size: 20px;//btn文字大小
-    letter-spacing: 3px;//调整文字间距
-    border-radius: 3px;//btn圆角
-    width: 200px;//这里用指定宽度把btn拉得更长
-}
-
 
 //--设置登录弹窗 ->
-
-@import url(http://fonts.googleapis.com/css?family=Roboto);
-
-/****** LOGIN MODAL ******/
-.loginmodal-container {
-padding: 30px;
-max-width: 350px;
-width: 100% !important;
-background-color: #F7F7F7;
-margin: 0 auto;
-border-radius: 2px;
-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-overflow: hidden;
-font-family: roboto;
-}
-
-.loginmodal-container h1 {
-text-align: center;
-font-size: 1.8em;
-font-family: roboto;
-}
-
-.loginmodal-container input[type=submit] {
-width: 100%;
-display: block;
-margin-bottom: 10px;
-position: relative;
-}
-
-.loginmodal-container input[type=text], input[type=password] {
-height: 44px;
-font-size: 16px;
-width: 100%;
-margin-bottom: 10px;
--webkit-appearance: none;
-background: #fff;
-border: 1px solid #d9d9d9;
-border-top: 1px solid #c0c0c0;
-/* border-radius: 2px; */
-padding: 0 8px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
-}
-
-.loginmodal-container input[type=text]:hover, input[type=password]:hover {
-border: 1px solid #b9b9b9;
-border-top: 1px solid #a0a0a0;
--moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
--webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.loginmodal {
-text-align: center;
-font-size: 14px;
-font-family: 'Elliot', 宋体, 华文细黑, STXihei, sans-serif;
-font-weight: 700;
-height: 36px;
-padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
-user-select: none; */
-}
-
-.loginmodal-submit {
-/* border: 1px solid #3079ed; */
-border: 0px;
-color: #fff;
-text-shadow: 0 1px rgba(0,0,0,0.1);
-background-color: #4d90fe;
-padding: 17px 0px;
-font-family: roboto;
-font-size: 14px;
-/* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
-}
-
-.loginmodal-submit:hover {
-/* border: 1px solid #2f5bb7; */
-border: 0px;
-text-shadow: 0 1px rgba(0,0,0,0.3);
-background-color: #357ae8;
-/* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
-}
-
-.loginmodal-container a {
-text-decoration: none;
-color: #666;
-font-weight: 400;
-text-align: center;
-display: inline-block;
-opacity: 0.6;
-transition: opacity ease 0.5s;
-}
-
-.login-help{
-font-size: 12px;
-}
-
-
-//- 增加三张图片 ->
-
-.caption {
-margin: 10px;
-text-align: center;
-top: 5px;
-font-family: nerislight, "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-font-size: 16px;
-}
-
-.thumbnail {
-  border: 0 none;
-  box-shadow: none;
-  margin-top: 10px;
-
-}
-
-.thumbnail-a{
-  border: 0 none;
-  box-shadow: none;
-  margin-top: 0;
-  // padding-top: -20px ;
-  // text-align: center;
-}
-
-.content-section-b {
-    padding: 15px ;
-    background-color: #edece8;
-
-}
-
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
@@ -1288,4 +960,261 @@ font-size: 16px;
 
 .login-help{
   font-size: 12px;
+}
+
+
+//*-------------leading page----------*/
+
+/*===== 首页通用设置 =====*/
+.welcome-box {
+  /* 副标题 */
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* 短分隔线 */
+  .short-line {
+    background: #0070DE;
+    margin: 15px auto 30px auto;
+    width: 150px;
+    height: 1.5px;
+  }
+
+  /* 按钮 */
+  .btn-push {
+    background-color: transparent;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); //半透明背景
+    padding: 10px 20px;
+    font-size: 20px;
+
+    /* 显示特效 */
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+/* 按钮-鼠标滑动效果 */
+  .btn-push:hover {
+    background-color: #0070DE;
+    border-color: #0070DE;
+  }
+}
+
+
+/*===== Intro 首页-广告轮播 =====*/
+.intro-box {
+  /*===== 轮播内容 =====*/
+  .item {
+    /* 标题 */
+    h3 {
+      margin-top: -40%; //标题高度
+      font-size: 50px; //文字大小
+      letter-spacing: 5px; //文字间距
+    }
+
+    /* 内文 */
+    p {
+      font-size: 20px;
+    }
+
+    /* 图片 */
+    img {
+      width: 1200px;
+      height: 450px;
+
+    }
+  }
+  
+  .carousel1 {
+    // background-image:url('header.jpg');
+    margin: 0 auto;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+
+/*===== 换页按钮 =====*/
+  .carousel-control {
+    span {
+      margin-top: 100%; //按钮高度
+      font-size: 50px; //按钮大小
+    }
+  }
+}
+
+/*===== Story 首页-品牌故事 =====*/
+.story-box {
+  /* 区块 */
+  background-color: #fff;
+  text-align: center;
+  padding: 25px 62.5px 50px 62.5px; //区块间隔
+
+  /* 标题 */
+  h3 {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  /* 内文 */
+  p {
+    color: #333;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  /* 图片 */
+  img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  /* 分隔线 */
+  hr {
+    height: 1.5px;
+    background-color: #666;
+  }
+}
+
+/*===== Service 首页-服务优势 =====*/
+.service-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 25px 62.5px 50px 62.5px; //区块间隔
+
+  /* 图片 */
+  img {
+    width: 100px;
+  }
+
+  /*===== 内容区块 =====*/
+  .box {
+    margin: 0 25px 0 25px;
+
+    /* 标题 */
+    h3 {
+      font-size: 18px;
+    }
+
+    /* 内文 */
+    p {
+      color: #666;
+      line-height: 24px;
+      margin-top: 25px;
+      text-align: justify;
+    }
+  }
+}
+
+/*===== Show 首页-推荐商品 =====*/
+.show-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0 50px 0;
+
+  /* 图片 */
+  img {
+    width: 100%;
+  }
+
+  /* 图片区块 */
+  .box {
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px #888;
+  }
+
+  /* 图片区块-鼠标滑动效果 */
+  .box:hover {
+    opacity: 0.6;
+  }
+
+  /* 文字区块 */
+  .content {
+    margin-top: 15px;
+    color: #000;
+  }
+}
+
+
+/*===== Feedback 首页-用户反馈 =====*/
+.feedback-box {
+  /* 区块 */
+  background-color: #fff;
+  text-align: center;
+  padding: 50px 0 125px 0;
+
+  /* 标题 */
+  strong {
+    margin-top: 25px;
+    color: #4A6BB5;
+  }
+
+  /* 图片 */
+  img {
+    width: 80px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+
+  /* 文字 */
+  p {
+    color: #666;
+    max-width: 550px;
+    margin: 0 auto 25px auto;
+  }
+
+  /* 按钮设置 */
+  .carousel-indicators {
+    bottom: -70px; //按钮位置
+
+    /* 按钮 */
+    li {
+      background-color: #ddd;
+      height: 12.5px;
+      width: 12.5px;
+      margin: 0 5px;
+      border-radius: 0;
+
+      /* 按钮转向45度 */
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    /* 按钮-启动效果 */
+    li.active {
+      background-color: #4A6BB5;
+    }
+  }
+}
+
+/*===== Brands 首页-合作伙伴 =====*/
+.brand-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0 50px 0;
+
+  /* 图片 */
+  img {
+    margin: 10px 15px 10px 15px;
+    width: 150px;
+  }
+}
+
+/*===== Push 首页-立即购买 =====*/
+.push-box {
+  /* 区块 */
+  text-align: center;
+  padding: 75px 0 0 0;
+  height: 200px;
+  background: image_url("start.jpg") no-repeat scroll top center/ cover; //背景图片
 }
