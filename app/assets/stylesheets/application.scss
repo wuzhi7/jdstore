@@ -314,9 +314,27 @@ body {
   min-height:100%;
   margin:0;
   padding:0;
+  overflow-x: hidden; //根据langdingpage模板加的
   position:relative;
-
-}
+//   /*===== 基础栏位设定 ======*/
+//   .width-25 {
+//     width: 25%;
+//   }
+//
+//   .width-50 {
+//     width: 50%;
+//   }
+//
+//   .width-75 {
+//     width: 75%;
+//   }
+//
+//   .width-100 {
+//     width: 100%;
+//   }
+// }
+//
+// }
 
 .main {
   margin-bottom:100px;
@@ -1296,15 +1314,15 @@ font-size: 16px;
 
 //=====langding page=====//
 
-body {
-  overflow-x: hidden; //裁切页面内容，超出视窗不显示
-  letter-spacing: 1px; //文字间距
-  font-size: 14px; //文字大小
-  position: relative; //设定为相对位置
-
-  a {
-    text-decoration:none !important; //文字连结移除底线
-  }
+// body {
+//   overflow-x: hidden; //裁切页面内容，超出视窗不显示
+//   letter-spacing: 1px; //文字间距
+//   font-size: 14px; //文字大小
+//   position: relative; //设定为相对位置
+//
+//   a {
+//     text-decoration:none !important; //文字连结移除底线
+//   }
 
   /*===== 基础栏位设定 ======*/
   .width-25 {
@@ -1322,7 +1340,6 @@ body {
   .width-100 {
     width: 100%;
   }
-}
 
 
 /*===== 首页通用设置 =====*/
