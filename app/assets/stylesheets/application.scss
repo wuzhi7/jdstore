@@ -211,7 +211,7 @@ width: 300px;
 
 
 /*头图*/
-.carousel {
+.carousel1 {
   // background-image:url('header.jpg');
   margin: 20px auto;
   width: 970px;
@@ -1007,13 +1007,20 @@ div.zoomMask {
 
 /*===== Intro 首页-广告轮播 =====*/
 .intro-box {
+
   /*===== 轮播内容 =====*/
   .item {
+    width: 100%;
+    height: 488px;
+    margin: 0 auto; /*水平居中*/
+    background-size: cover;
+
     /* 标题 */
     h3 {
-      margin-top: -40%; //标题高度
+      margin-top: -30%; //标题高度
       font-size: 50px; //文字大小
       letter-spacing: 5px; //文字间距
+
     }
 
     /* 内文 */
@@ -1023,19 +1030,25 @@ div.zoomMask {
 
     /* 图片 */
     img {
-      width: 1200px;
-      height: 450px;
-
+      width: 100%;
+      height: 488px;
+      text-align: center;
+      
     }
   }
-  
-  .carousel1 {
-    // background-image:url('header.jpg');
-    margin: 0 auto;
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-  }
+
+.carousel-inner {
+  width: 100%;
+  height: 488px;
+}
+  // .carousel {
+  //   // background-image:url('header.jpg');
+  //   margin: 0 auto;
+  //   width: 100%;
+  //   height: 450px;
+  //   // overflow: hidden;
+  // }
+
 
 /*===== 换页按钮 =====*/
   .carousel-control {

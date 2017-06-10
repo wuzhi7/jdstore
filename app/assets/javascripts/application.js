@@ -18,7 +18,7 @@
 //= require autosize.min
 //= require wow.min
 //= require bootstrap/modal
-
+//= require bootstrap-sprockets
 //= require_tree .
 
 
@@ -33,4 +33,4 @@ $(window).scroll(function () {
 	} else {
 		$('#navbar').removeClass('scroll_navbar') //navbar 移除 scroll_navbar CSS
 	}
-}) 
+})
